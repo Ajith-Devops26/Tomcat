@@ -100,25 +100,13 @@ sudo vi /opt/tomcat/conf/tomcat-users.xml
 Replace the contents with:
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
+<role rolename="manager-gui"/>
+<role rolename="admin-gui"/>
+<role rolename="manager-script"/>
+<role rolename="manager-jmx"/>
+<role rolename="host-manager-gui"/>
 
-<tomcat-users xmlns="http://tomcat.apache.org/xml"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://tomcat.apache.org/xml tomcat-users.xsd"
-version="1.0">
-
-    <role rolename="manager-gui"/>
-    <role rolename="manager-script"/>
-    <role rolename="manager-jmx"/>
-    <role rolename="manager-status"/>
-
-    <role rolename="admin-gui"/>
-    <role rolename="admin-script"/>
-
-    <user
-        username="admin"
-        password="admin123"
-        roles="manager-gui,manager-script,manager-jmx,manager-status,admin-gui,admin-script"/>
+<user username="admin" password="admin123" roles="manager-gui,admin-gui,host-manager-gui"/>
 
 </tomcat-users>
 ```
