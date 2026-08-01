@@ -46,7 +46,7 @@ cd /opt
 # Step 4: Download Apache Tomcat
 
 ```bash
-sudo wget https://downloads.apache.org/tomcat/tomcat-10/v10.1.44/bin/apache-tomcat-10.1.44.tar.gz
+sudo wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.57/bin/apache-tomcat-10.1.57.tar.gz
 ```
 
 ---
